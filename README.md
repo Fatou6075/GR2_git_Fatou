@@ -3,3 +3,5 @@
 ## commande de base 
 
 git status
+
+fatou 
