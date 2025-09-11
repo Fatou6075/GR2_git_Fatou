@@ -5,3 +5,6 @@
 git status
 
 fatou 
+
+
+création du du conflit 
