@@ -1,0 +1,22 @@
+name: Run tests
+
+#Le workflow s’exécute à chaque push ou PR
+on: [push, pull_request]
+jobs:
+  test_pr:
+    runs-on: ubuntu-latest   # GitHub fournit une machine Linux
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v2
+
+      - name: Installer Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'
+
+      - name: Installer pytest
+        run: pip install pytest
+
+      - name: Lancer les tests
+        run: pytest
